@@ -7,7 +7,7 @@ import { type AuthenticationDTO } from 'domain/usecases/authentication'
 export class RemoteAuthentication {
   constructor (
     private readonly url: string,
-    private readonly httpPostClient: HttpPostClient
+    private readonly httpPostClient: HttpPostClient<AuthenticationDTO.Params, AuthenticationDTO.Result>
   ) { }
 
   async auth (params: AuthenticationDTO.Params): Promise<void> {
