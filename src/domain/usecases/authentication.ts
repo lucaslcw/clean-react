@@ -3,7 +3,7 @@ import { type AccountModel } from 'domain/models/account-model'
 export namespace AuthenticationDTO {
   export type Params = {
     email: string
-    passowrd: string
+    password: string
   }
   export type Result = AccountModel
 }
